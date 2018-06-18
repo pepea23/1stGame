@@ -6,7 +6,9 @@ class Test extends Phaser.Scene {
     }
     create() {
         let style = { font: "65px Arial", fill: "#ff0044", align: "center" };
-        this.add.text(200, 100, "- phaser -\nwith a sprinkle of\npixi dust", style);
+        this.add.text(this.scene.scene.physics.world.bounds.width*0.5, this.scene.scene.physics.world.bounds.height*0.5, "Hello", style);
+        //this.stage.backgroundColor = "#4488AA";
+        //console.log(this.scene.scene.physics.world.bounds.width+'+'+this.scene.scene.physics.world.bounds.height);
     }
 }
 export default Test;

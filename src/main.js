@@ -2,16 +2,17 @@ import 'phaser';
 import Test from './Test';
 
 
+const WIDTH = document.body.clientWidth;
+const HEIGHT = screen.height*0.9; 
 let config = {
     type: Phaser.WEBGL,
     parent: 'content',
-    width: 400,
-    height: 240,
+    width: WIDTH,
+    height: HEIGHT,
     scaleMode: 0, //Phaser.ScaleManager.EXACT_FIT,
     physics: {
         default: 'arcade',
         arcade: {
-            gravity: { y: 800 },
             debug: false
         }
     },
@@ -21,6 +22,3 @@ let config = {
 };
 
 let game = new Phaser.Game(config);
-
-/*
-https://codepen.io/samme/pen/JMVBeV*/
